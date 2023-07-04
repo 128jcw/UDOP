@@ -10,8 +10,8 @@ PYTHONPATH="." python benchmarker/cli/l5/train.py \
 --im_dir '/input/Kleister-Charity/pdf' \
 --max_source_length 4096 \
 --img_conf '{"size": 224}' \
---max_target_length 32 \
---eval_max_gen_length 32 \
+--max_target_length 256 \
+--eval_max_gen_length 256 \
 --dropout_rate 0.15 \
 --label_smoothing 0 \
 --num_workers 12 \
