@@ -4,10 +4,10 @@ PYTHONPATH="." python benchmarker/cli/l5/train.py \
 --relative_bias_args '[{"type":"1d"},{"type":"horizontal"},{"type":"vertical"}]' \
 --model_type 'UdopUnimodel' \
 --data_dir './' \
---train_data_dir '/scratch/jcw/KleisterCharity/memmaps_4096/KleisterCharity/tesseract/train' \
---val_data_dir '/scratch/jcw/KleisterCharity/memmaps_4096/KleisterCharity/tesseract/dev' \
---test_data_dir  '/scratch/jcw/KleisterCharity/memmaps_4096/KleisterCharity/tesseract/test' \
---im_dir '/scratch/jcw/KleisterCharity/KleisterCharity' \
+--train_data_dir '/input/memmaps_4096/KleisterCharity/tesseract/train' \
+--val_data_dir '/input/memmaps_4096/KleisterCharity/tesseract/dev' \
+--test_data_dir  '/input/memmaps_4096/KleisterCharity/tesseract/test' \
+--im_dir '/input/Kleister-Charity/pdf' \
 --max_source_length 4096 \
 --img_conf '{"size": 224}' \
 --max_target_length 32 \
