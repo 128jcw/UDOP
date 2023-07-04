@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: due-evaluator
+Version: 0.0.8
+Summary: Python Boilerplate contains all the boilerplate you need to create a Python package.
+Home-page: https://git.applica.ai/due/due-evaluator.git
+Author: Applica.ai
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: PROPRIETARY Applica
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+
+
+# DUE Evaluator
+The repository contains the evaluator covering all of the metrics required by tasks within the DUE Benchmark, i.e., set-based F1 (for KIE), ANLS (used in document VQA), accuracy (including variant used in WTQ), as well as group-based ANLS we proposed for KIE problems with structured output. 
+
+## Usage
+The `deval` command will be available after the package installation. Every time, it is required to provide input and output files (both in the [DU-Schema format](https://github.com/due-benchmark/du-schema)) using `-o` and `-r` parameters.
+
+Other settings are task-specific and limited to metric (`-m`) and optional case-insensitiveness (`-i`). Recommended values of these are:
+
+| Dataset                    | Metric                                        | Case insensitive              |
+|----------------------------|-----------------------------------------------|-------------------------------|
+| DocVQA, InfographicsVQA    | ANLS                                          | Yes                           |
+| Kleister Charity, DeepForm | F1                                            | Yes                           |
+| PapersWithCode             | GROUP-ANLS                                    | Yes                           |
+| WikiTableQuestions         | WTQ                                           | No (handled by metric itself) |
+| TabFact                    | F1 (obtained value will be equal to Accuracy) | No                            |

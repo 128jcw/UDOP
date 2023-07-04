@@ -1,0 +1,2 @@
+[console_scripts]
+deval = due_evaluator.__main__:main
