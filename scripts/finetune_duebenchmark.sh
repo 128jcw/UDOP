@@ -20,7 +20,7 @@ PYTHONPATH="." python benchmarker/cli/l5/train.py \
 --accumulate_grad_batches 1 \
 --max_epochs 30 \
 --val_check_interval 0.2 \
---output_dir './KC4096' \
+--output_dir './output/KC4096' \
 --warmup_steps 100 \
 --learning_rate 5e-5 \
 --lr_scheduler constant \
