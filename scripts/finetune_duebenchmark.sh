@@ -1,6 +1,6 @@
 PYTHONPATH="." python benchmarker/cli/l5/train.py \
 --gpus 1 \
---model_name_or_path "model/udop-unimodel-large-224" \
+--model_name_or_path "/model/udop-unimodel-large-224" \
 --relative_bias_args '[{"type":"1d"},{"type":"horizontal"},{"type":"vertical"}]' \
 --model_type 'UdopUnimodel' \
 --data_dir './' \
