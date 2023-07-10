@@ -225,7 +225,7 @@ class PregeneratedDatasetBase(Dataset):
             elif path.exist(self.im_dir + "3/" + item_dict['doc_id']):
                 image_path=self.im_dir + "3/" + item_dict['doc_id']
                 item_dict = self.add_images(item_dict, image_path)
-            elif path.exist(self.im_dir + "4/" + item_dict['doc_id']):
+            else:
                 image_path=self.im_dir + "4/" + item_dict['doc_id']
                 item_dict = self.add_images(item_dict, image_path)
             return item_dict
