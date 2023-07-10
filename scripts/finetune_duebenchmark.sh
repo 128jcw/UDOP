@@ -7,7 +7,7 @@ PYTHONPATH="." python benchmarker/cli/l5/train.py \
 --train_data_dir '/input/memmaps_4096/KleisterCharity/tesseract/train' \
 --val_data_dir '/input/memmaps_4096/KleisterCharity/tesseract/dev' \
 --test_data_dir  '/input/memmaps_4096/KleisterCharity/tesseract/test' \
---im_dir '/input/Kleister-Charity/pdf' \
+--im_dir '/data' \
 --max_source_length 4096 \
 --img_conf '{"size": 224}' \
 --max_target_length 256 \
