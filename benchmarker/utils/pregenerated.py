@@ -14,6 +14,7 @@ from pdf2image import convert_from_path
 from benchmarker.data.data_converter import FEAT_META
 from benchmarker.data.model.feature import Feature
 from benchmarker.data.utils import IMG_SIZE_DIVISIBILITY, apply_on_nested_dict
+from os import path
 
 from core.common.utils import img_trans_torchvision
 # noinspection PyArgumentList
