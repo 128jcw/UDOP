@@ -17,7 +17,7 @@ PYTHONPATH="." python benchmarker/cli/l5/train.py \
 --num_workers 12 \
 --train_batch_size 1 \
 --eval_batch_size 1 \
---accumulate_grad_batches 1 \
+--accumulate_grad_batches 8 \
 --max_epochs 30 \
 --val_check_interval 0.2 \
 --output_dir '/output/KC4096' \
