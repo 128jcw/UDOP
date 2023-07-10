@@ -216,7 +216,18 @@ class PregeneratedDatasetBase(Dataset):
 
             item_dict = apply_on_nested_dict(convert, self.data)
             # item_dict = self.add_images(item_dict, os.path.join(self.im_dir, item_dict['doc_id']+'.pdf'))
-            item_dict = self.add_images(item_dict, os.path.join(self.im_dir, item_dict['doc_id']))
+            if path.exist(self.im_dir + "1/" + item_dict['doc_id']):
+                image_path=self.im_dir + "1/" + item_dict['doc_id']
+                item_dict = self.add_images(item_dict, image_path)
+            elif path.exist(self.im_dir + "2/" + item_dict['doc_id']):
+                image_path=self.im_dir + "2/" + item_dict['doc_id']
+                item_dict = self.add_images(item_dict, image_path)
+            elif path.exist(self.im_dir + "3/" + item_dict['doc_id']):
+                image_path=self.im_dir + "3/" + item_dict['doc_id']
+                item_dict = self.add_images(item_dict, image_path)
+            elif path.exist(self.im_dir + "4/" + item_dict['doc_id']):
+                image_path=self.im_dir + "4/" + item_dict['doc_id']
+                item_dict = self.add_images(item_dict, image_path)
             return item_dict
         except:
             return self[(item + 1) % len(self)]
